@@ -5,8 +5,8 @@
 .about {
   /*height: 400px;*/
   width: 100vw;
-  position: absolute;
-  background: #efefef;
+  position: relative;
+  background:white;
 }
 
 .about::before {
@@ -54,14 +54,16 @@
 .about-wrapper .about-title h1 {
   margin: 0px 20px 0px 0px;
   font-size: 70px;
+  color: #505050;
 }
 
 #in-touch-cta {
   margin: 40px 0px;
   padding: 15px 20px;
-  border: 2px solid black;
+  border: 2px solid #505050;
   display: inline-block;
   cursor: pointer;
+  color: #505050;
 }
 
 #in-touch-cta:hover {
@@ -76,11 +78,48 @@
 
 .about-wrapper .about-content {
   width: 60%;
+  color: #505050;
 }
+
+.projects {
+  width: 100vw;
+  position: relative;
+  color: white;
+  z-index: -1;
+}
+
+.projects-wrapper {
+  font-family: sans-serif;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1320px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+
+.projects .projects-title h1 {
+  margin: 0px 20px 0px 0px;
+  font-size: 70px;
+  color: white;
+}
+
+#content {
+ background: black;
+ z-index: -1;
+}
+
 
 @media (max-width: 800px) {
   .about-wrapper {
       width: 90%;
+  }
+  .projects-wrapper {
+    width: 90%;
   }
 }
 
@@ -117,6 +156,22 @@
   }
 
   .about-wrapper .about-content h3 {
+    font-size: 16px;
+  }
+
+  .projects-wrapper .projects-title h1 {
+    font-size: 40px;
+  }
+
+  .projects-wrapper .projects-content {
+    width: 100%;
+  }
+
+  .projects-wrapper .projects-content h2 {
+    font-size: 20px;
+  }
+
+  .projects-wrapper .projects-content h3 {
     font-size: 16px;
   }
 
