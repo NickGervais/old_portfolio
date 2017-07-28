@@ -1,0 +1,124 @@
+#content{
+  position: absolute;
+}
+
+.about {
+  /*height: 400px;*/
+  width: 100vw;
+  position: absolute;
+  background: #efefef;
+}
+
+.about::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-6deg);
+}
+.about::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  transform-origin: right bottom;
+  transform: skewY(-6deg);
+}
+
+.about-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1320px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: sans-serif;
+  margin-bottom: 30px;
+}
+.about-wrapper .about-title {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px 0px 0px;
+}
+.about-wrapper .about-title h1 {
+  margin: 0px 20px 0px 0px;
+  font-size: 70px;
+}
+
+#in-touch-cta {
+  margin: 40px 0px;
+  padding: 15px 20px;
+  border: 2px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#in-touch-cta:hover {
+  border: 2px solid gold;
+  background: gold;
+  color: white;
+}
+
+#in-touch-cta.in-touch-two {
+  display: none;
+}
+
+.about-wrapper .about-content {
+  width: 60%;
+}
+
+@media (max-width: 800px) {
+  .about-wrapper {
+      width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-wrapper .about-title {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #in-touch-cta.in-touch-two {
+    display: inline-block;
+  }
+
+  #in-touch-cta.in-touch-one {
+    display: none;
+  }
+
+  .about-wrapper .about-title h1 {
+    font-size: 40px;
+  }
+
+  .about-wrapper .about-content {
+    width: 100%;
+  }
+
+  .about-wrapper .about-content h2 {
+    font-size: 20px;
+  }
+
+  .about-wrapper .about-content h3 {
+    font-size: 16px;
+  }
+
+
+}
