@@ -13,16 +13,13 @@
 
 .background-img {
   position: fixed;
-  /* height: 100%;
-  width: 100%; */
-   top: 0px;
+  top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px; 
   background-image: url(../images/home-bg.jpg);
   background-size: cover;
   background-position: 70% 50%;
-  /* background-attachment: fixed; */
   z-index: -2;
 }
 
