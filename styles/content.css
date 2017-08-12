@@ -3,12 +3,11 @@
   background: black;
   z-index: -1;
   width: 100%;
-  /* overflow-y: hidden; */
 }
 
 .about {
   /*height: 400px;*/
-  width: 100vw;
+  width: 100%;
   position: relative;
   background:white;
 }
@@ -43,12 +42,12 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1320px;
-  padding-top: 60px;
+  padding-top: 60px; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .about-wrapper .about-title {
   display: flex;
@@ -76,7 +75,7 @@
   color: white;
 }
 
-#in-touch-cta.in-touch-two {
+#in-touch-cta.mobile {
   display: none;
 }
 
@@ -86,7 +85,7 @@
 }
 
 .projects {
-  width: 100vw;
+  width: 100%;
   position: relative;
   color: white;
   z-index: -1;
@@ -100,8 +99,8 @@
   max-width: 1320px;
   padding-top: 60px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: space-between; 
   font-family: sans-serif;
   margin-bottom: 30px;
 }
@@ -113,12 +112,14 @@
 }
 
 .about-cta{
-  width: 320px;
-  height: 100px;
+  width: 100%;
+  height: 170px;
   position: absolute;
   top: 0px;
   left: 0px;
   background: gold;
+  opacity: .7;
+  z-index: -1;
 }
 .about-cta::before {
   content: '';
@@ -127,24 +128,11 @@
   position: absolute;
   background: inherit;
   z-index: -1;
-  bottom: 0;
+  top: -100px;
   left: 0;
-  transform-origin: bottom right;
-  transform: skewY(15deg);
+  transform-origin: top left;
+  transform: skewY(13deg);
 }
-/* .about-cta::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  bottom: 0;
-  left: 0;
-  transform-origin: right bottom;
-  transform: skewY(-6deg);
-} */
-
 
 @media (max-width: 800px) {
   .about-wrapper {
@@ -167,11 +155,11 @@
     flex-wrap: wrap;
   }
 
-  #in-touch-cta.in-touch-two {
+  #in-touch-cta.mobile {
     display: inline-block;
   }
 
-  #in-touch-cta.in-touch-one {
+  #in-touch-cta.non-mobile {
     display: none;
   }
 
@@ -206,6 +194,10 @@
   .projects-wrapper .projects-content h3 {
     font-size: 16px;
   }
+}
 
-
+@media (min-width: 1000px){
+  .projects-wrapper {
+    padding-top: 100px;
+  }
 }
