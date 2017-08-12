@@ -2,6 +2,10 @@
   font-family: sans-serif;
   position: fixed;
   z-index: 20;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -140,7 +144,7 @@
   display: block;
   overflow: hidden;
   position: absolute;
-  height: 2.5px;
+  height: 2px;
   width: 100%;
   background: white;
   opacity: 1;
@@ -161,16 +165,16 @@
 
 #nav-icon span:nth-child(2){
   top: 50%;
-  margin-top: -2px;
+  transform: translateY(-50%);
 }
 
 #nav-icon span:nth-child(3){
-  bottom: 1px;
+   bottom: 0px; 
 }
 
 #nav-icon.open span:nth-child(1){
   top: 50%;
-  margin-top: -1px;
+  transform: translateY(-50%);
   background: black;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -187,7 +191,7 @@
 
 #nav-icon.open span:nth-child(3){
   top: 50%;
-  margin-top: -1px;
+  transform: translateY(-50%);
   background: black;
 
   -webkit-transform: rotate(-135deg);
@@ -204,17 +208,5 @@
   #right-nav {
     width: 150px;
     right: -155px;
-  }
-  #nav-icon {
-    width: 20px;
-    height: 15px;
-    margin-right: 15px;
-  }
-  #nav-icon span {
-    height: 1px;
-  }
-
-  #nav-icon span:nth-child(2){
-    margin-top: -1px;
   }
 }

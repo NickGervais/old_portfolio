@@ -3,6 +3,7 @@
   top: 0px;
   left: 0px;
   height: 100vh;
+  width: 100%;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -11,16 +12,15 @@
 }
 
 .background-img {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
-  height: 100vh;
-  width: 100%;
+  right: 0px;
+  bottom: 0px;
   background-image: url(../images/home-bg2.jpg);
-  background-color: black;
   background-size: cover;
   background-position: 70% 50%;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   z-index: -2;
 }
 
