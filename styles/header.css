@@ -3,7 +3,7 @@
   top: 0px;
   left: 0px;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -13,11 +13,13 @@
 
 .background-img {
   position: fixed;
-  top: 0px;
+  /* height: 100%;
+  width: 100%; */
+   top: 0px;
   left: 0px;
   right: 0px;
-  bottom: 0px;
-  background-image: url(../images/home-bg2.jpg);
+  bottom: 0px; 
+  background-image: url(../images/home-bg.jpg);
   background-size: cover;
   background-position: 70% 50%;
   /* background-attachment: fixed; */
@@ -52,6 +54,21 @@
   z-index: 10;
 }
 
+.read-more {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  margin: 0px 0px 25px 20px;
+  transition: all .3s ease-in-out;
+  transform: rotate(-6deg);
+  transform-origin: bottom left;
+  cursor: pointer;
+}
+
 .dropdown-icon {
   font-size: 24px;
   transition: all .3s ease-in-out;
@@ -67,6 +84,9 @@
   }
 
   .dropdown-icon {
+    font-size: 14px;
+  }
+  .read-more {
     font-size: 14px;
   }
 }

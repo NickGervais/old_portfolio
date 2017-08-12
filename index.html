@@ -24,13 +24,13 @@
         <div id="right-nav">
           <div class="link-list">
             <div class="line"></div>
-            <div id="about-link" class="link">AboutMe</div>
+            <div class="link about-link">About</div>
             <div class="line"></div>
-            <div id="projects-link" class="link">Projects</div>
+            <div class="link projects-link">Projects</div>
             <div class="line"></div>
-            <div id="hobbies-link" class="link">Hobbies</div>
+            <div class="link hobbies-link">Hobbies</div>
             <div class="line"></div>
-            <div id="resume-link" class="link">Resume</div>
+            <div class="link resume-link">Resume</div>
             <div class="line"></div>
           </div>
 
@@ -58,7 +58,7 @@
       <div class="header">
         <!-- ************ Navigation Bar ************* -->
           <div id="navbar">
-            <i class="material-icons" id="logo">show_chart</i>
+            <i class="material-icons home-link" id="logo">show_chart</i>
 
             <div id="nav-icon">
               <span></span>
@@ -70,26 +70,27 @@
         <div class="name">
           Nicholas Gervais <!-- variabled title -->
         </div>
-        <div class="memo">
+        <!-- <div class="memo">
           <div class="read_more">
             read more
           </div>
           <i class="material-icons dropdown-icon">expand_more</i>
-        </div>
+        </div> -->
+        <div class="read-more about-link"> READ MORE </div>
         <div class="background-img"></div>
       </div>
 
       <!-- *********** Content **************  -->
       <div id="content">
-        <div class="about-cta">
+         <div class="about-cta">
         
-        </div>
+        </div> 
         <div class="about">
           <div class="about-wrapper">
             <div class="about-title">
               <h1>About</h1>
               <h1>Me.</h1>
-              <div id="in-touch-cta" class="in-touch-one">Lets get in touch.</div>
+              <div id="in-touch-cta" class="non-mobile">Lets get in touch.</div>
             </div>
             <div class="about-content">
               <h2>
@@ -98,14 +99,14 @@
               <h3>
                 I am studying Computer Science at the University of Minnesoate Duluth where I am also an RA.
                 During the summers I live in Coon Rapids, MN with my lovely parents
-                and this past summer I have had the great honor to work at TCF bank as an IT intern and learned a lot more about programming, technologies, and the professional world.
+                and this past summer I have had the great honor to work at TCF bank as an IT intern and I learned a lot more about programming, technologies, and the professional world.
               </h3>
               <h3>
                 When I am not studying, coding, or working, I love to go rock climbing, slacklining, and create things with my hands. Hipster stuff I guess...
                 If you ever want to talk about programming, business ideas, or hipster stuff I would love to chat!
               </h3>
             </div>
-            <div id="in-touch-cta" class="in-touch-two">Lets get in touch.</div>
+            <div id="in-touch-cta" class="mobile">Lets get in touch.</div>
 
           </div>
         </div>
@@ -128,17 +129,16 @@
       </div>
       <script>
         // scroll to content class
-        $(".memo").click(function() {
-          console.log("clicked read more");
-          $('html,body').animate({
-              scrollTop: $("#content").offset().top},
-              'slow');
-        });
-
-        $("#about-link").click(function() {
+        $(".about-link").click(function() {
           $('html,body').animate({
               scrollTop: $(".about").offset().top},
               'slow');
+        });
+
+        $(".home-link").click(function(){
+          $('html,body').animate({
+            scrollTop: $('body').offset().top},
+            'slow');
         });
 
 
@@ -175,7 +175,7 @@
 
         // checks if the top of the window is below the content and changes classes accordingly
         function windowBelowContent(){
-          var top = $("#content").offset().top;
+          var top = $(".read-more").offset().top;
           if ($(this).scrollTop() >= top - 5) {
             $("#navbar").addClass("black-nav");
           } else {
