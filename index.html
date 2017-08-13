@@ -53,7 +53,7 @@
               </svg>
             </a>
 
-            <div class="contact-btn">
+            <div class="contact-btn contact-link">
               Leave a message!
             </div>
           </div>
@@ -88,7 +88,7 @@
             <div class="about-title">
               <h1>About</h1>
               <h1>Me.</h1>
-              <div id="in-touch-cta" class="non-mobile">Lets get in touch.</div>
+              <div id="in-touch-cta" class="non-mobile contact-link">Lets get in touch.</div>
             </div>
             <div class="about-content">
               <h2>
@@ -104,7 +104,7 @@
                 If you ever want to talk about programming, business ideas, or hipster stuff I would love to chat!
               </h3>
             </div>
-            <div id="in-touch-cta" class="mobile">Lets get in touch.</div>
+            <div id="in-touch-cta contact-link" class="mobile">Lets get in touch.</div>
 
           </div>
         </div>
@@ -237,15 +237,15 @@
               </div>
             </div>
             <div class="contact-content">
-              <form class="contact-form">
+              <form id="message-form" class="contact-form">
                 <label class="half"><span>Your Name</span>
-                  <input id="name" type="name" name="name" placeholder="Nicholas Gervais">
+                  <input id="name" type="name" name="name" placeholder="name here" required>
                 </label>
                 <label class="half"><span>Your Email</span>
-                  <input id="email" type="email" name="email" placeholder="nicholaspgervais@gmail.com">
+                  <input id="email" type="email" name="email" placeholder="example@gmail.com" required>
                 </label>
                 <label class="full"><span>Leave a Message</span>
-                  <input id="message" type="text" name="message" placeholder="Hey man, let's rock climb some time!">
+                  <input id="message" type="text" name="message" placeholder="message here" required>
                 </label>
                 <div class="full" style="text-align: right;">
                   <input id="send-message" class="send-btn" type="submit" value="Send Message">
@@ -272,6 +272,12 @@
             'slow');
         });
 
+        $(".contact-link").click(function(){
+          $('html,body').animate({
+            scrollTop: $('.contact').offset().top},
+            'slow');
+          $('#right-nav').removeClass('open');
+        });
 
         //calls setHeaderAndNavHeight on every window resize event
         $(window).resize(function(){
@@ -304,7 +310,21 @@
         $("html,body").click(function(){
           $("#right-nav").removeClass("open");
           $("#nav-icon").removeClass("open");
-        })
+        });
+
+        $("#message-form").submit(function(event){
+          var name = $("#name").val();
+          var email = $("#email").val();
+          var message = $("#message").val();
+          var url = "https://hooks.slack.com/services/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"
+          var payload={"channel": "#portfolio-page", "username": email , "text": name + ': ' + message, "icon_emoji": ":ghost:"};
+          $.post(url,JSON.stringify(payload), function(data){
+            console.log(data);
+            $("#message-form").trigger("reset");
+          });
+          event.preventDefault();
+        });
+
 
         // checks if the top of the window is below the content and changes classes accordingly
         function windowBelowContent(){
@@ -332,6 +352,8 @@
             height: $(".header").height()
           });
         }
+
+
       </script>
     </body>
 </html>
