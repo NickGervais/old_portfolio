@@ -72,8 +72,8 @@
         <div class="name">
           Nicholas Gervais <!-- variabled title -->
         </div>
-        <div class="read-more about-link"> READ MORE </div>
       </div>
+      <div class="read-more about-link"> READ MORE </div>
 
       <!-- *********** Content **************  -->
       <div id="content">
@@ -150,7 +150,7 @@
         // scroll to content class
         $(".about-link").click(function() {
           $('html,body').animate({
-              scrollTop: $(".about").offset().top},
+              scrollTop: $(".about").offset().top - 220},
               'slow');
         });
 
@@ -169,10 +169,12 @@
         // calls windowBelowContent on every scroll event
         $(window).scroll(function() {
           windowBelowContent();
+          scrollReadMore();
         });
         // calls windowBelowContent and setHeaderAndNavHeight when page is ready
         $(document).ready(function() {
           windowBelowContent();
+          scrollReadMore();
           setHeaderAndNavHeight();
         });
 
@@ -194,11 +196,19 @@
 
         // checks if the top of the window is below the content and changes classes accordingly
         function windowBelowContent(){
-          var top = $(".read-more").offset().top;
+          var top = $(".about-cta").offset().top;
           if ($(this).scrollTop() >= top - 5) {
             $("#navbar").addClass("black-nav");
           } else {
             $("#navbar").removeClass("black-nav");
+          }
+        }
+
+        function scrollReadMore(){
+          if($(this).scrollTop() >= 100) {
+            $(".read-more").hide();
+          } else {
+            $(".read-more").show();
           }
         }
 
