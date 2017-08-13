@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="styles/content.css" />
         <link rel="stylesheet" href="styles/windows.css" />
         <link rel="stylesheet" href="styles/projects.css" />
+        <link rel="stylesheet" href="styles/hobbies.css" />
 
     </head>
     <body>
@@ -72,8 +73,8 @@
         <div class="name">
           Nicholas Gervais <!-- variabled title -->
         </div>
-        <div class="read-more about-link"> READ MORE </div>
       </div>
+      <div class="read-more about-link"> READ MORE </div>
 
       <!-- *********** Content **************  -->
       <div id="content">
@@ -144,14 +145,52 @@
           </div>
         </div>
 
+        <div class="window two"></div>
+
+        <!-- ******** Hobbies Section ******** -->
+        <div class="hobbies">
+          <div class="hobbies-wrapper">
+            <div class="hobbies-title">
+              <h1 style="color: white;">Hobbies.</h1>
+            </div>
+            <div class="hobbies-content">
+              <div class="hobby-img rock-climbing">
+                <div class="hobby-hover">
+                  <h1> Rock Climbing </h1>
+                </div>
+              </div>
+              <div class="hobby-img creating">
+                <div class="hobby-hover">
+                  <h1> Creating </h1>
+                  <p> from coding to sewing and art, I love making things </p>
+                </div>
+              </div>
+              <div class="hobby-img guitar">
+                <div class="hobby-hover">
+                  <h1> Guitar </h1>
+                </div>
+              </div>
+              <div class="hobby-img slack-lining">
+                <div class="hobby-hover">
+                  <h1> Slacklining </h1>
+                </div>
+              </div>
+              <div class="left-diagonal"></div>
+              <div class="right-diagonal"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
       <script>
         // scroll to content class
         $(".about-link").click(function() {
+          // var middle = $(".about").offset().top + $(".about").height() / 2;
+          // console.log(middle);
           $('html,body').animate({
               scrollTop: $(".about").offset().top},
               'slow');
+            
         });
 
         $(".home-link").click(function(){
@@ -169,10 +208,12 @@
         // calls windowBelowContent on every scroll event
         $(window).scroll(function() {
           windowBelowContent();
+          scrollReadMore();
         });
         // calls windowBelowContent and setHeaderAndNavHeight when page is ready
         $(document).ready(function() {
           windowBelowContent();
+          scrollReadMore();
           setHeaderAndNavHeight();
         });
 
@@ -194,11 +235,19 @@
 
         // checks if the top of the window is below the content and changes classes accordingly
         function windowBelowContent(){
-          var top = $(".read-more").offset().top;
+          var top = $(".about-cta").offset().top;
           if ($(this).scrollTop() >= top - 5) {
             $("#navbar").addClass("black-nav");
           } else {
             $("#navbar").removeClass("black-nav");
+          }
+        }
+
+        function scrollReadMore(){
+          if($(this).scrollTop() >= 20) {
+            $(".read-more").hide();
+          } else {
+            $(".read-more").show();
           }
         }
 

@@ -1,0 +1,168 @@
+.hobbies {
+    width: 100%;
+    position: relative;
+    background: black;
+    z-index: 3;
+}
+.hobbies::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: skewY(-3deg);
+}
+.hobbies::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  transform-origin: right bottom;
+  transform: skewY(-3deg);
+}
+.hobbies-wrapper {
+    font-family: sans-serif;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; 
+    align-items: flex-end;
+    font-family: sans-serif;
+}
+.hobbies .hobbies-title h1 {
+    margin: 0px 20px 0px 0px;
+    font-size: 70px;
+    color: white;
+}
+.hobbies-content {
+    width: 70%;
+    position: relative;
+    margin-top: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.left-diagonal {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 10%;
+    height: 102%;
+    background: black;
+    transform-origin: top right;
+    transform: skew(-8deg);
+}
+.right-diagonal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10%;
+    height: 102%;
+    background: black;
+    transform-origin: bottom left;
+    transform: skew(-8deg);
+}
+.hobby-img {
+    width: 50%;
+    height: 200px;
+    position: relative;
+    background: gray;
+    overflow: hidden;
+    cursor:default;
+    background-size: cover;
+    background-position: center;
+}
+
+.rock-climbing {
+    background-image: url('../images/rock-climbing.jpg');
+}
+
+.slack-lining {
+    background-image: url('../images/slack-lining2.jpg');
+}
+.guitar {
+    background-image: url('../images/guitar.jpg');
+}
+.creating {
+    background-image: url('../images/creating.JPG');
+}
+
+.hobby-hover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 71%;
+    height: 100%;
+    background: black;
+    opacity: .6;
+    transform: translateX(100%); 
+    transition: .5s;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 20% 0px 20%;
+}
+
+.hobby-hover h1 {
+    font-size: 24px;
+    margin: 5px;
+}
+
+.hobby-hover p {
+    font-size: 16px;
+    margin: 5px;
+
+}
+
+.hobby-img:hover .hobby-hover {
+     transform: translateX(0%); 
+}
+
+@media (max-width: 650px) {
+    .hobbies-wrapper .hobbies-title h1 {
+        font-size: 40px;
+    }
+
+    .hobbies-wrapper .hobbies-content h2 {
+        font-size: 20px;
+    }
+
+    .hobbies-wrapper .hobbies-content h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 800px){
+    .hobbies-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 900px){
+    .hobbies-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hobbies-content {
+        margin-bottom: 30px;
+    }
+    
+    .hobbies-wrapper .hobbies-content {
+        width: 100%;
+    }
+}
