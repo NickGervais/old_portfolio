@@ -5,17 +5,29 @@
 
 }
 
-.one {
+.window.one {
     background-image: url(../images/projects-bg.jpeg);
     background-size: cover;
     background-attachment: fixed;
     z-index: -2;
 }
 
-.two {
+.window.two {
     background-image: url(../images/hobby-bg.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: 30% 50%;
     z-index: -2;
+}
+
+.window.three {
+    background-image: url('../images/resume.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 70% 50%;
+}
+.window.four {
+    background-image: url('../images/resume-bg.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
 }
