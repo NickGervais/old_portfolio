@@ -9,6 +9,7 @@
   width: 100%;
   position: relative;
   background:white;
+  z-index: 4;
 }
 
 .about::before {
@@ -21,7 +22,7 @@
   bottom: 0;
   left: 0;
   transform-origin: top left;
-  transform: skewY(-6deg);
+  transform: skewY(-4deg);
 }
 .about::after {
   content: '';
@@ -33,7 +34,7 @@
   bottom: 0;
   left: 0;
   transform-origin: right bottom;
-  transform: skewY(-6deg);
+  transform: skewY(-4deg);
 }
 
 .about-wrapper {
@@ -42,6 +43,7 @@
   margin-right: auto;
   max-width: 1320px;
   padding-top: 60px; 
+  padding-bottom: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -83,62 +85,22 @@
   color: #505050;
 }
 
-.projects {
-  width: 100%;
-  position: relative;
-  color: white;
-  z-index: -1;
-}
-
-.projects-wrapper {
-  font-family: sans-serif;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1320px;
-  padding-top: 60px;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between; 
-  font-family: sans-serif;
-  margin-bottom: 30px;
-}
-
-.projects .projects-title h1 {
-  margin: 0px 20px 0px 0px;
-  font-size: 70px;
-  color: white;
-}
-
 .about-cta{
   width: 100%;
-  height: 170px;
+  height: 270px;
   position: absolute;
-  top: 0px;
+  top: -100px;
   left: 0px;
   background: gold;
   opacity: .7;
   z-index: -1;
-}
-.about-cta::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: -100px;
-  left: 0;
-  transform-origin: top left;
-  transform: skewY(13deg);
+   transform-origin: top left;
+  transform: skewY(13deg); 
 }
 
 @media (max-width: 800px) {
   .about-wrapper {
       width: 90%;
-  }
-  .projects-wrapper {
-    width: 90%;
   }
 }
 
@@ -146,6 +108,7 @@
   .about-wrapper {
     flex-direction: column;
     align-items: flex-start;
+    padding-bottom: 0px;
   }
 
   .about-wrapper .about-title {
@@ -177,26 +140,5 @@
   .about-wrapper .about-content h3 {
     font-size: 16px;
   }
-
-  .projects-wrapper .projects-title h1 {
-    font-size: 40px;
-  }
-
-  .projects-wrapper .projects-content {
-    width: 100%;
-  }
-
-  .projects-wrapper .projects-content h2 {
-    font-size: 20px;
-  }
-
-  .projects-wrapper .projects-content h3 {
-    font-size: 16px;
-  }
 }
 
-@media (min-width: 1000px){
-  .projects-wrapper {
-    padding-top: 100px;
-  }
-}

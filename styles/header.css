@@ -9,18 +9,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.background-img {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px; 
   background-image: url(../images/home-bg.jpg);
   background-size: cover;
   background-position: 70% 50%;
-  z-index: -2;
+  background-attachment: fixed;
+  z-index: -1;
 }
 
 .name {
@@ -38,19 +31,6 @@
   margin: 0px 100px 10px 100px;;
 }
 
-.memo {
-  font-family: 'Sriracha', cursive;
-  font-size: 14px;
-  color: white;
-  position: absolute;
-  left: 30px;
-  bottom: 20px;
-  text-align: center;
-  transition: all .3s ease-in-out;
-  cursor: pointer;
-  z-index: 10;
-}
-
 .read-more {
   font-family: sans-serif;
   font-weight: 700;
@@ -64,11 +44,7 @@
   transform: rotate(-6deg);
   transform-origin: bottom left;
   cursor: pointer;
-}
-
-.dropdown-icon {
-  font-size: 24px;
-  transition: all .3s ease-in-out;
+  z-index: 1;
 }
 
 @media(max-width: 1000px){
