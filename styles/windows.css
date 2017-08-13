@@ -1,0 +1,14 @@
+.window {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+}
+
+.one {
+    background-image: url(../images/projects-bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2;
+
+}
