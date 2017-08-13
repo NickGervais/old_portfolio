@@ -105,7 +105,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 71%;
+    width: 66%;
     height: 100%;
     background: black;
     opacity: .6;
@@ -115,7 +115,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0px 20% 0px 20%;
+    padding: 0px 15% 0px 20%;
 }
 
 .hobby-hover h1 {
@@ -131,6 +131,14 @@
 
 .hobby-img:hover .hobby-hover {
      transform: translateX(0%); 
+}
+
+@media (max-width: 500px){
+     .slack-lining .hobby-hover {
+        padding: 0px 15% 0px 10%;
+        width: 76%;
+    } 
+
 }
 
 @media (max-width: 650px) {
