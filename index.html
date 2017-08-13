@@ -149,9 +149,12 @@
       <script>
         // scroll to content class
         $(".about-link").click(function() {
+          // var middle = $(".about").offset().top + $(".about").height() / 2;
+          // console.log(middle);
           $('html,body').animate({
-              scrollTop: $(".about").offset().top - 220},
+              scrollTop: $(".about").offset().top},
               'slow');
+            
         });
 
         $(".home-link").click(function(){
