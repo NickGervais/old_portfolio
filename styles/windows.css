@@ -25,5 +25,9 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 70% 50%;
-
+}
+.window.four {
+    background-image: url('../images/resume-bg.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
 }
