@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Nicholas Gervais</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico in the root directory -->
@@ -80,9 +80,9 @@
 
       <!-- *********** Content **************  -->
       <div id="content">
-         <div class="about-cta">
+         <div class="about-cta"></div> 
         
-        </div> 
+        <!-- ***** About Me Section ***** -->
         <div class="about">
           <div class="about-wrapper">
             <div class="about-title">
@@ -104,13 +104,14 @@
                 If you ever want to talk about programming, business ideas, or hipster stuff I would love to chat!
               </h3>
             </div>
-            <div id="in-touch-cta contact-link" class="mobile">Lets get in touch.</div>
+            <div id="in-touch-cta" class="mobile contact-link">Lets get in touch.</div>
 
           </div>
         </div>
 
         <div class="window one"></div>
 
+        <!-- ***** Projects Section ***** -->
         <div class="projects">
           <div class="projects-wrapper">
             <div class="projects-title">
@@ -138,7 +139,6 @@
                   <h1> Fyttr </h1>
                   <p> fyttr was a shoe sizing app I made with 2 of my friends in the 2015 University of Minnesota Hackathon.</p>                 
                 </div>
-                <!-- <i class="material-icons">cloud</i> -->
                 fyttr
               </div>
               <div class="diagonal"></div>
@@ -244,8 +244,8 @@
                 <label class="half"><span>Your Email</span>
                   <input id="email" type="email" name="email" placeholder="example@gmail.com" required>
                 </label>
-                <label class="full"><span>Leave a Message</span>
-                  <input id="message" type="text" name="message" placeholder="message here" required>
+                <label class="full"><span>Message</span>
+                  <input id="message" type="text" name="message" placeholder="leave a message and I'll get back to you!" required>
                 </label>
                 <div class="full" style="text-align: right;">
                   <input id="send-message" class="send-btn" type="submit" value="Send Message">
@@ -258,31 +258,56 @@
 
       </div>
       <script>
-        // scroll to content class
-        $(".about-link").click(function() {
-          $('html,body').animate({
-              scrollTop: $(".about").offset().top},
-              'slow');
-            
-        });
-
+        // scroll to different sections
+        
         $(".home-link").click(function(){
           $('html,body').animate({
             scrollTop: $('body').offset().top},
             'slow');
         });
+        
+        $(".about-link").click(function() {
+          $('html,body').animate({
+              scrollTop: $(".about").offset().top},
+              'slow'); 
+          closeSideNav();
+        });
+
+
+        $(".projects-link").click(function(){
+          $('html,body').animate({
+            scrollTop: $('.projects').offset().top},
+            'slow');
+          closeSideNav();
+        });
+
+        $(".hobbies-link").click(function(){
+          $('html,body').animate({
+            scrollTop: $('.hobbies').offset().top},
+            'slow');
+          closeSideNav();
+        });
+
+        $(".resume-link").click(function(){
+          $('html,body').animate({
+            scrollTop: $('.resume').offset().top},
+            'slow');
+          closeSideNav();
+        });
+
+
 
         $(".contact-link").click(function(){
           $('html,body').animate({
             scrollTop: $('.contact').offset().top},
             'slow');
-          $('#right-nav').removeClass('open');
+          closeSideNav();
         });
 
         //calls setHeaderAndNavHeight on every window resize event
         $(window).resize(function(){
           setHeaderAndNavHeight();
-        })
+        });
 
         // calls windowBelowContent on every scroll event
         $(window).scroll(function() {
@@ -308,10 +333,15 @@
         });
 
         $("html,body").click(function(){
-          $("#right-nav").removeClass("open");
-          $("#nav-icon").removeClass("open");
+          closeSideNav();
         });
 
+        function closeSideNav() {
+          $('#right-nav').removeClass('open');
+          $("#nav-icon").removeClass("open");
+        }
+
+        // Submit contact form
         $("#message-form").submit(function(event){
           var name = $("#name").val();
           var email = $("#email").val();
