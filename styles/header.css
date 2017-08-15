@@ -44,7 +44,7 @@
   transform: rotate(-6deg);
   transform-origin: bottom left;
   cursor: pointer;
-  z-index: 0;
+  z-index: 5;
 }
 
 @media(max-width: 1000px){

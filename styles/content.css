@@ -1,5 +1,5 @@
 #content{
-  position: absolute;
+  position: static;
   background: black;
   z-index: -1;
   width: 100%;
@@ -9,7 +9,7 @@
   width: 100%;
   position: relative;
   background:black;
-  z-index: 4;
+   z-index: 2; 
 }
 
 .about::before {
@@ -48,16 +48,16 @@
     flex-direction: row;
     justify-content: space-between;
     font-family: sans-serif;
-    margin-bottom: 0px;
+     margin-bottom: 0px; 
 }
 .about-wrapper .about-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 10px 30px 0px 0px;
+  /* margin: 10px 30px 0px 0px; */
 }
 .about-wrapper .about-title h1 {
-  margin: 0px 20px 0px 0px;
+   margin: 0px 0px 0px 0px; 
   font-size: 70px;
   color: white;
 }
@@ -82,8 +82,9 @@
 }
 
 .about-wrapper .about-content {
-  width: 60%;
+  width: 100%;
   color: white;
+  /* margin-top: 40px; */
   letter-spacing: 1px;
 }
 
@@ -95,10 +96,33 @@
   left: 0px;
   background: gold;
   opacity: .7;
-  z-index: -1;
+  z-index: -2;
   transition: all .3s ease-in-out;
   transform-origin: top left;
   transform: skewY(13deg); 
+}
+
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-bottom: 0px; */
+  }
+
+  /* .about-wrapper .about-title {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  } */
+
+  #in-touch-cta.mobile {
+    display: block;
+  }
+
+  #in-touch-cta.non-mobile {
+    display: none;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -114,32 +138,9 @@
   .read-more {
     margin: 0px 0px 10px 10px;
   }
-  .about-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 0px;
-  }
-
-  .about-wrapper .about-title {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  #in-touch-cta.mobile {
-    display: inline-block;
-  }
-
-  #in-touch-cta.non-mobile {
-    display: none;
-  }
 
   .about-wrapper .about-title h1 {
     font-size: 40px;
-  }
-
-  .about-wrapper .about-content {
-    width: 100%;
   }
 
   .about-wrapper .about-content h2 {

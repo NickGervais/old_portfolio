@@ -9,7 +9,6 @@
     background-image: url(../images/projects-bg.jpeg);
     background-size: cover;
     background-attachment: fixed;
-    z-index: -2;
 }
 
 .window.two {
@@ -17,7 +16,6 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: 30% 50%;
-    z-index: -2;
 }
 
 .window.three {
