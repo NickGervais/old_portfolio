@@ -125,6 +125,11 @@
 
 }
 
+@media (max-width: 1000px) {
+    .about-cta {
+    top: -60px;
+  }
+}
 @media (max-width: 800px) {
   .about-wrapper {
       width: 90%;
@@ -132,13 +137,6 @@
 }
 
 @media (max-width: 650px) {
-  .about-cta {
-    top: -60px;
-  }
-  .read-more {
-    margin: 0px 0px 10px 10px;
-  }
-
   .about-wrapper .about-title h1 {
     font-size: 40px;
   }

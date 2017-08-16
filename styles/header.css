@@ -48,16 +48,18 @@
 }
 
 @media(max-width: 1000px){
+  .about-cta {
+    top: -60px;
+  }
   .name{
     font-size: 20px;
+  }
+    .read-more {
+    margin: 0px 0px 10px 10px;
   }
 
   .memo {
     font-size:11px;
-  }
-
-  .dropdown-icon {
-    font-size: 14px;
   }
   .read-more {
     font-size: 14px;

@@ -1,0 +1,35 @@
+.about::before, .about::after {
+    -webkit-transform: skewY(-4deg);
+    -moz-transform: skewY(-4deg);
+    -ms-transform: skewY(-4deg);
+    -o-transform: skewY(-4deg);
+    transform: skewY(-4deg);    
+}
+
+.cta {
+    margin: 40px 0px;
+    padding: 15px 20px;
+    border: 2px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;    
+}
+.cta.black {
+
+}
+.cta:hover {
+    border: 2px solid gold;
+    background: gold;
+    color: black;
+}
+.cta.mobile {
+    display: none;
+}
+@media (max-width: 900px) {
+    .cta.mobile {
+        display: block;
+    }
+    .cta.non-mobile {
+        display: none;
+    }
+}
