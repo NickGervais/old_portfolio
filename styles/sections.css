@@ -1,3 +1,9 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 #content {
     position: static;
     background: black;
@@ -58,7 +64,12 @@
     width: 100%;
     position: relative;
     color: white;
+    margin-top: 20px;
 }
+.divider {
+    width: 40px;
+}
+
 @media (max-width: 900px){
     .wrapper {
         flex-direction: column;
@@ -85,11 +96,5 @@
     }
     .content h3 {
         font-size: 16px;
-    }
-    .about-cta {
-        top: -60px;
-    }
-    .read-more {
-        margin: 0px 0px 10px 10px;
     }
 }

@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/header.css" />
         <link rel="stylesheet" href="styles/navbar.css" />
-        <!-- <link rel="stylesheet" href="styles/content.css" /> -->
         <link rel="stylesheet" href="styles/windows.css" />
         <link rel="stylesheet" href="styles/about.css" />        
          <link rel="stylesheet" href="styles/projects.css" /> 
@@ -91,6 +90,7 @@
               <h1>About Me.</h1>
               <div class="non-mobile cta contact-link">Lets get in touch.</div>
             </div>
+            <span class="divider"></span>
             <div class="content">
               <h2>
                 Hello, My name is Nicholas Gervais. I love learning, coding, and creating.
@@ -186,12 +186,13 @@
         <div class="window three"></div>
 
         <div class="resume section">
-          <div class="resume-wrapper wrapper">
-            <div class="resume-title title">
+          <div class="wrapper">
+            <div class="title">
               <h1> Resume. </h1>
-              <div id="print-resume-cta" class="non-mobile">Printable Resume.</div>
+              <div class="cta non-mobile">Printable Resume.</div>
             </div>
-            <div class="resume-content content">
+            <span class="divider"></span>
+            <div class="content">
               I am studying Computer Science at the University of Minnesoate Duluth where I am also an RA.
                 During the summers I live in Coon Rapids, MN with my lovely parents
                 and this past summer I have had the great honor to work at TCF bank as an IT intern and I learned a lot more about programming, technologies, and the professional world.
@@ -212,15 +213,15 @@
                 During the summers I live in Coon Rapids, MN with my lovely parents
                 and this past summer I have had the great honor to work at TCF bank as an IT intern and I learned a lot more about programming, technologies, and the professional world.
             </div>
-             <div id="print-resume-cta" class="mobile">Printable Resume.</div> 
+             <div class="cta mobile">Printable Resume.</div> 
           </div>
         </div>
 
         <div class="window four"></div>
 
-        <div class="contact">
-          <div class="contact-wrapper">
-            <div class="contact-title">
+        <div class="contact section">
+          <div class="wrapper">
+            <div class="title">
               <h1> Contact Me. </h1>
               <div class="contacts">
                 <a href="https://www.linkedin.com/in/nicholasgervais6/">
@@ -236,7 +237,8 @@
                 </a>
               </div>
             </div>
-            <div class="contact-content">
+            <span class="divider"></span>
+            <div class="contact-content content">
               <form id="message-form" class="contact-form">
                 <label class="half"><span>Your Name</span>
                   <input id="name" type="name" name="name" placeholder="name here" required>
@@ -248,7 +250,7 @@
                   <input id="message" type="text" name="message" placeholder="leave a message and I'll get back to you!" required>
                 </label>
                 <div class="full" style="text-align: right;">
-                  <input id="send-message" class="send-btn" type="submit" value="Send Message">
+                   <input id="send-message" class="send-btn" type="submit" value="Send Message"> 
                 </div>
               </form>
             </div>
