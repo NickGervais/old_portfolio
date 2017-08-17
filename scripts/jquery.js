@@ -42,12 +42,10 @@ $(window).resize(function(){
 // calls windowBelowContent on every scroll event
 $(window).scroll(function() {
     windowBelowContent();
-    scrollReadMore();
 });
 // calls windowBelowContent and setHeaderAndNavHeight when page is ready
 $(document).ready(function() {
     windowBelowContent();
-    scrollReadMore();
     setHeaderAndNavHeight();
 });
 // toggle right nav open/closed
@@ -82,7 +80,8 @@ $("#message-form").submit(function(event){
 // checks if the top of the window is below the content and changes classes accordingly
 function windowBelowContent(){
     var top = $(".about-cta").offset().top;
-    if ($(this).scrollTop() >= top - 5) {
+    console.log(top + ":" + $(this).scrollTop());
+    if ($(this).scrollTop() >= top) {
     $("#navbar").addClass("black-nav");
     } else {
     $("#navbar").removeClass("black-nav");
