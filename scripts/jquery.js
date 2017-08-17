@@ -1,49 +1,39 @@
 // scroll to different sections
-
 $(".home-link").click(function(){
     $('html,body').animate({
     scrollTop: $('body').offset().top},
     'slow');
 });
-
 $(".about-link").click(function() {
     $('html,body').animate({
         scrollTop: $(".about").offset().top},
         'slow'); 
     closeSideNav();
 });
-
-
 $(".projects-link").click(function(){
     $('html,body').animate({
     scrollTop: $('.projects').offset().top},
     'slow');
     closeSideNav();
 });
-
 $(".hobbies-link").click(function(){
     $('html,body').animate({
     scrollTop: $('.hobbies').offset().top},
     'slow');
     closeSideNav();
 });
-
 $(".resume-link").click(function(){
     $('html,body').animate({
     scrollTop: $('.resume').offset().top},
     'slow');
     closeSideNav();
 });
-
-
-
 $(".contact-link").click(function(){
     $('html,body').animate({
     scrollTop: $('.contact').offset().top},
     'slow');
     closeSideNav();
 });
-
 //calls setHeaderAndNavHeight on every window resize event
 $(window).resize(function(){
     setHeaderAndNavHeight();
@@ -60,27 +50,22 @@ $(document).ready(function() {
     scrollReadMore();
     setHeaderAndNavHeight();
 });
-
 // toggle right nav open/closed
 $("#nav-icon").click(function(e){
     e.stopPropagation();
     $("#right-nav").toggleClass("open");
     $("#nav-icon").toggleClass("open");
 });
-
 $("#right-nav, navbar").click(function(e){
     e.stopPropagation();
 });
-
 $("html,body").click(function(){
     closeSideNav();
 });
-
 function closeSideNav() {
     $('#right-nav').removeClass('open');
     $("#nav-icon").removeClass("open");
 }
-
 // Submit contact form
 $("#message-form").submit(function(event){
     var name = $("#name").val();
@@ -94,8 +79,6 @@ $("#message-form").submit(function(event){
     });
     event.preventDefault();
 });
-
-
 // checks if the top of the window is below the content and changes classes accordingly
 function windowBelowContent(){
     var top = $(".about-cta").offset().top;
@@ -105,15 +88,6 @@ function windowBelowContent(){
     $("#navbar").removeClass("black-nav");
     }
 }
-
-function scrollReadMore(){
-    if($(this).scrollTop() >= 20) {
-    $(".read-more").hide();
-    } else {
-    $(".read-more").show();
-    }
-}
-
 function setHeaderAndNavHeight(){
     $(".header").css({
     height: $(window).height()

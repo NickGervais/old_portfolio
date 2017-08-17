@@ -29,24 +29,9 @@
   cursor:default;
   margin: 0px 100px 10px 100px;;
 }
-.read-more {
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: white;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  margin: 0px 0px 25px 20px;
-  transition: all .3s ease-in-out;
-  transform: rotate(-6deg);
-  transform-origin: bottom left;
-  cursor: pointer;
-  z-index: 5;
-}
 .about-cta{
   width: 100%;
-  height: 270px;
+  height: 100px;
   position: absolute;
   top: -100px;
   left: 0px;
@@ -55,23 +40,17 @@
   z-index: -2;
   transition: all .3s ease-in-out;
   transform-origin: top left;
-  transform: skewY(13deg); 
+  transform: skewY(13deg);
 }
 @media(max-width: 1000px){
   .about-cta {
+    height: 60px;
     top: -60px;
   }
   .name{
     font-size: 20px;
   }
-  .read-more {
-    margin: 0px 0px 10px 10px;
-  }
-
   .memo {
     font-size:11px;
-  }
-  .read-more {
-    font-size: 14px;
   }
 }

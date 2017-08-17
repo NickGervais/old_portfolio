@@ -14,9 +14,6 @@
     cursor: pointer;
     color: white;    
 }
-.cta.black {
-
-}
 .cta:hover {
     border: 2px solid gold;
     background: gold;
@@ -24,6 +21,21 @@
 }
 .cta.mobile {
     display: none;
+}
+.read-more {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    margin: 0px 0px 15px 10px;
+    transform: skew(-13deg) rotate(-18deg);
+    transform-origin: bottom left;
+    cursor: pointer;
+    display: inline-block;
+ 
 }
 @media (max-width: 900px) {
     .cta.mobile {
