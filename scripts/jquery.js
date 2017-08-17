@@ -47,6 +47,7 @@ $(window).scroll(function() {
 $(document).ready(function() {
     windowBelowContent();
     setHeaderAndNavHeight();
+    tallyTraffic();
 });
 // toggle right nav open/closed
 $("#nav-icon").click(function(e){
@@ -77,10 +78,18 @@ $("#message-form").submit(function(event){
     });
     event.preventDefault();
 });
+// measures traffic on webpage
+function tallyTraffic(){
+    var url = "https://hooks.slack.com/services/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"
+    var payload={"channel": "#portfolio-traffic", "text": "viewed", "icon_emoji": ":ghost:"}
+    $.post(url,JSON.stringify(payload), function(data){
+    console.log(data);
+    });
+}
+
 // checks if the top of the window is below the content and changes classes accordingly
 function windowBelowContent(){
     var top = $(".about-cta").offset().top;
-    console.log(top + ":" + $(this).scrollTop());
     if ($(this).scrollTop() >= top) {
     $("#navbar").addClass("black-nav");
     } else {
