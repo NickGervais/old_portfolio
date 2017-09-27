@@ -67,10 +67,6 @@
      transform: translateX(0%); 
 }
 
-a {
-    text-decoration: none;
-    color: gold;
-}
 
 .ride-share {
     display: flex;
@@ -79,7 +75,7 @@ a {
     background: #FF72be;
     opacity: .8;
 }
-.ride-share i {
+.material-icons {
     font-size: 5em;
     color: white;
 }
@@ -92,16 +88,22 @@ a {
     font-size: 4em;
     color: white;
 }
-.fyttr {
+.presentation a {
+    text-decoration: none;
+    color: gold;
+}
+.weather {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #9AC0CD;
     opacity: .8;
-    font-size: 4em;
-    color: white;
 }
-.fyttr i {
+.weather i {
     font-size: 5em;
     color: white;
+}
+.weather a {
+    text-decoration: none;
+    color: #9AC0CD;
 }
